@@ -1,69 +1,68 @@
-# Weather App
+# WeatherApp - Versión 1.0
 
-Este es un proyecto de aplicación móvil para Android desarrollado en Kotlin con Jetpack Compose. La aplicación muestra información meteorológica basada en la ubicación del usuario, utilizando la API de Open-Meteo.
+¡Bienvenido a **WeatherApp**! 🌦️  
+Con esta aplicación, puedes obtener información detallada del tiempo en cualquier parte del mundo. Ya sea que estés planeando un viaje, saliendo de casa o simplemente curioso sobre el clima en otro lugar, **WeatherApp** te brinda todo lo que necesitas en un solo lugar.
 
-## Características
+---
 
-- Obtiene la ubicación actual del usuario.
-- Consulta la API de Open-Meteo para obtener el clima en la ubicación actual.
-- Muestra información como temperatura, estado del tiempo y humedad.
-- Representa visualmente el clima con imágenes según el código WMO devuelto por la API.
+## Características principales
+
+### 1. **Tiempo actual**
+- **Temperatura actual**: Obtén la temperatura en tiempo real. 🌡️
+- **Máximas y mínimas**: Conoce las temperaturas máximas y mínimas del día.
+- **Sensación térmica**: Descubre cómo se siente realmente la temperatura en tu ubicación.
+
+### 2. **Detalles adicionales**
+- **Velocidad del viento**: Consulta la velocidad del viento en tiempo real. 🌬️
+- **Índice UV**: Infórmate sobre el nivel de radiación ultravioleta. ☀️
+- **Probabilidad de lluvia**: Prepárate con la probabilidad de precipitaciones. 🌧️
+
+### 3. **Pronóstico extendido**
+- **Próximas 24 horas**: Revisa el pronóstico hora por hora para las próximas 24 horas. ⏳
+- **Próxima semana**: Planifica tu semana con el pronóstico de los próximos 7 días. 📅
+- **Día anterior**: Compara el clima actual con el del día anterior. 🔄
+
+---
+
+## ¿Cómo funciona?
+
+1. **Ubicación automática**: La aplicación detecta automáticamente tu ubicación para mostrarte el tiempo actual.
+2. **Búsqueda manual**: Introduce el nombre de cualquier ciudad del mundo para obtener su pronóstico.
+3. **Diseño intuitivo**: Interfaz limpia y fácil de usar, con información clara y accesible.
+
+---
 
 ## Tecnologías utilizadas
 
-- **Kotlin**
-- **Jetpack Compose**
-- **Retrofit** (para realizar las solicitudes HTTP a la API de Open-Meteo)
-- **Coil** (para la carga de imágenes)
-- **Fused Location Provider API** (para obtener la ubicación del usuario)
+- **Desarrollo nativo**: Construida con Android Studio y Kotlin.
+- **API de tiempo**: Integración con una API de pronóstico del tiempo en tiempo real https://open-meteo.com/ .
+- **Diseño moderno**: Interfaz basada en Material Design para una experiencia de usuario óptima.
 
-## Instalación y ejecución
+---
 
-1. Clona este repositorio:
-   ```sh
-   git clone https://github.com/tu-usuario/weather-app.git
-   ```
-2. Abre el proyecto en Android Studio.
-3. Agrega tu clave de API si es necesaria (para Open-Meteo no es obligatoria).
-4. Ejecuta la aplicación en un emulador o dispositivo físico.
+## Descarga y uso
 
-## Uso de la API de Open-Meteo
+- **Disponible en**: [Enlace al APK en GitHub](#) (adjunto en la sección de releases).
+- **Requisitos**: Android 6.0 (Marshmallow) o superior.
 
-La aplicación realiza una petición a la API de Open-Meteo para obtener datos del clima. Ejemplo de URL de solicitud:
+---
 
-```sh
-https://api.open-meteo.com/v1/forecast?latitude=40.4168&longitude=-3.7038&current_weather=true
-```
+## Próximas actualizaciones
 
-La respuesta incluye datos como:
+Estamos trabajando en nuevas funcionalidades para mejorar tu experiencia:
+- Notificaciones del tiempo.
+- Widgets para la pantalla de inicio.
+- Soporte para más idiomas y regiones.
 
-```json
-{
-  "latitude": 40.4168,
-  "longitude": -3.7038,
-  "current_weather": {
-    "temperature": 25.3,
-    "windspeed": 10.5,
-    "weathercode": 0
-  }
-}
-```
+---
 
-## Mapeo de Códigos WMO a Imágenes
+## ¡Gracias por usar WeatherApp! 🌍
 
-La aplicación usa un `when` en Kotlin para asignar imágenes según el código WMO:
+Tu opinión es importante para nosotros. Si tienes sugerencias o encuentras algún problema, no dudes en contactarnos a través de [issues en GitHub](#).
 
-```kotlin
-val imageRes = when (wmoCode) {
-    0 -> R.drawable.sunny
-    in 1..3 -> R.drawable.partly_cloudy
-    in 45..48 -> R.drawable.fog
-    in 51..67 -> R.drawable.rainy
-    in 71..77 -> R.drawable.snowy
-    in 80..99 -> R.drawable.thunderstorm
-    else -> R.drawable.unknown
-}
-```
+---
+
+**Nota**: Esta es la primera versión de la aplicación. ¡Esperamos que la disfrutes! 🚀
 
 ## Contribución
 
