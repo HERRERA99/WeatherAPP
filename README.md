@@ -3,6 +3,7 @@
 ¡Bienvenido a **WeatherApp**! 🌦️  
 Con esta aplicación, puedes obtener información detallada del tiempo en cualquier parte del mundo. Ya sea que estés planeando un viaje, saliendo de casa o simplemente curioso sobre el clima en otro lugar, **WeatherApp** te brinda todo lo que necesitas en un solo lugar.
 
+[Video ejemplo de la App](https://github.com/HERRERA99/WeatherAPP/blob/main/Screen_recording_20250224_214627.webm)
 ---
 
 ## Características principales
